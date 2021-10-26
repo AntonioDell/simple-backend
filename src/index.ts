@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-  res.send("A new season started!");
+  res.send("Welcome to advanced blaseball!");
 });
 
 app.get("/bets", async (req, res) => {
