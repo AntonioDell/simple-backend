@@ -15,6 +15,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: base
+    env_file: .env
     environment:
       PGUSER: ${POSTGRES_USER}
       PGHOST: ${POSTGRES_HOST}

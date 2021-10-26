@@ -1,6 +1,12 @@
 version: '3.7'
 
 services:
+  database:
+    container_name: ${COMPOSE_PROJECT_NAME}_${POSTGRES_SERVER_NAME}
+    image: "postgres:latest"
+    ports:
+      - ${POSTGRES_PORT}:5432
+    env_file: prod.env
   ts-node-docker:
     build:
       target: production

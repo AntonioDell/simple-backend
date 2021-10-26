@@ -3,9 +3,11 @@ import { createConnection } from "typeorm";
 import { User } from "./entity/User";
 import express from "express";
 
+const port = process.env.NODEJS_PORT || 8080;
+
 const app = express();
-app.listen(8080, () => {
-  console.log(`server running on port ${process.env.PGPASSWORD}`);
+app.listen(port, () => {
+  console.log(`server running on port ${port}`);
 });
 
 createConnection()
