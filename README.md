@@ -10,9 +10,11 @@ Nice-to-have: make.
 
 ## Run dev server
 
+⚠️ Debugging with the `launch.json` file doesn't work yet.
+
 Install npm dependencies with `npm install`.
 
-Start docker containers with `make up`. 
+Start docker containers with `make up`.
 It is equivalent to running `sudo docker-compose up -d`.
 
 Node server will be hosted at localhost:8080 (if you didn't change `.env`).
