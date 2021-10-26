@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3"
 
 services:
   database:
@@ -6,6 +6,7 @@ services:
     image: "postgres:latest"
     ports:
       - ${POSTGRES_PORT}:5432
+    env_file: .env
   ts-node-docker:
     depends_on:
       - database
@@ -14,6 +15,12 @@ services:
       context: .
       dockerfile: Dockerfile
       target: base
+    environment:
+      PGUSER: ${POSTGRES_USER}
+      PGHOST: ${POSTGRES_HOST}
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: ${POSTGRES_DB}
+      PGPORT: ${POSTGRES_PORT}
     volumes:
       - ./src:/home/node/app/src
       - ./nodemon.json:/home/node/app/nodemon.json
