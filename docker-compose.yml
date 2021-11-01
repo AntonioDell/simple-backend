@@ -6,7 +6,7 @@ services:
     image: "postgres:latest"
     ports:
       - ${POSTGRES_PORT}:5432
-    env_file: .env
+    env_file: ./env/dev.env
   ts-node-docker:
     depends_on:
       - database
@@ -15,7 +15,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: base
-    env_file: .env
+    env_file: ./env/dev.env
     environment:
       PGUSER: ${POSTGRES_USER}
       PGHOST: ${POSTGRES_HOST}

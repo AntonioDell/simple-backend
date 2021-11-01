@@ -6,9 +6,9 @@ services:
     image: "postgres:latest"
     ports:
       - ${POSTGRES_PORT}:5432
-    env_file: .prod.env
+    env_file: ./env/prod.env
   ts-node-docker:
     build:
       target: production
-    command: node build/index.js
-    env_file: .prod.env
+    command: node src/index.js
+    env_file: ./env/prod.env

@@ -5,8 +5,12 @@
    "main": "index.js",
    "scripts": {
       "start": "ts-node src/index.ts",
-      "build": "tsc -p .",
-      "dev": "nodemon src/index.ts"
+      "build": "tsc",
+      "dev": "nodemon src/index.ts",
+      "seed:create": "ts-node typeorm migration:create -c seed -n InitSeed",
+      "seed:generate": "ts-node typeorm migration:generate -c seed -n ",
+      "seed:run": "ts-node typeorm migration:run -c seed",
+      "seed:revert": "ts-node typeorm migration:revert -c seed"
    },
    "author": "",
    "license": "ISC",

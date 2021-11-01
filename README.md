@@ -23,8 +23,6 @@ To inspect docker container startup use `sudo docker-compose up` instead of `mak
 
 ## Deploy to prod
 
-⚠️ Doesn't work yet
-
 Run `make up-prod`.
 
 ## Configure
@@ -52,3 +50,4 @@ The following resources were used to create this project:
 
 - [Setting up Docker + TypeScript + Node (Hot reloading code changes in a running container) 🦄 🚀](https://dev.to/dariansampare/setting-up-docker-typescript-node-hot-reloading-code-changes-in-a-running-container-2b2f)
 - [Typeorm Docs](https://orkhan.gitbook.io/typeorm/docs/)
+- [Typescript in prod Docker](https://simplernerd.com/docker-typescript-production/)
