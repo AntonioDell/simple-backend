@@ -41,7 +41,7 @@ Change the values inside `.env` to suit your needs. Never use the default values
 
 ## ToDos
 
-- [] Create .vscode/launch.json that can be attached to docker node
+- [ ] Create .vscode/launch.json that can be attached to docker node
 - [x] Make prod build work
 
 ## Credits
