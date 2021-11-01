@@ -2,15 +2,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Docker: Attach to Node",
       "type": "node",
       "request": "attach",
-      "restart": true,
+      "name": "Attach to Docker",
       "port": 9229,
-      "address": "localhost",
+      "address": "0.0.0.0",
+      "restart": true,
       "localRoot": "${workspaceFolder}",
-      "remoteRoot": "/home/node/app",
-      "protocol": "inspector"
+      "remoteRoot": "/usr/app",
+      "skipFiles": ["<node_internals>/**/*.js"],
+      "sourceMapPathOverrides": {
+        "/usr/app/*": "${workspaceRoot}/*"
+      }
     }
   ]
 }

@@ -23,10 +23,9 @@ services:
       PGDATABASE: ${POSTGRES_DB}
       PGPORT: ${POSTGRES_PORT}
     volumes:
-      - ./src:/home/node/app/src
-      - ./nodemon.json:/home/node/app/nodemon.json
-    expose:
-      - "${NODEJS_PORT}"
+      - ./src:/usr/app/src
+      - ./nodemon.json:/usr/app/nodemon.json
     ports:
+      - "9229:9229"
       - "${NODEJS_PORT}:${NODEJS_PORT}"
     command: npm run dev
