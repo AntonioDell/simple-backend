@@ -10,8 +10,6 @@ Nice-to-have: make.
 
 ## Run dev server
 
-⚠️ Debugging with the `launch.json` file doesn't work yet.
-
 Install npm dependencies with `npm install`.
 
 Start docker containers with `make up`.
@@ -20,6 +18,8 @@ It is equivalent to running `sudo docker-compose --env-file ./env/dev.env -f doc
 Node server will be hosted at localhost:8080 (if you didn't change `/env/dev.env`).
 
 To inspect docker container startup use `make up-debug` (or `sudo docker-compose --env-file ./env/dev.env -f docker-compose.yml up`).
+
+Using Visual Studio Code you should be able to start the `Attach to Docker` to have debugging support.
 
 ## Deploy to prod
 
@@ -41,7 +41,7 @@ Change the values inside `.env` to suit your needs. Never use the default values
 
 ## ToDos
 
-- [ ] Create .vscode/launch.json that can be attached to docker node
+- [x] Create .vscode/launch.json that can be attached to docker node
 - [x] Make prod build work
 
 ## Credits
