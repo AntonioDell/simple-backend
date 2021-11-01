@@ -15,11 +15,11 @@ Nice-to-have: make.
 Install npm dependencies with `npm install`.
 
 Start docker containers with `make up`.
-It is equivalent to running `sudo docker-compose up -d`.
+It is equivalent to running `sudo docker-compose --env-file ./env/dev.env -f docker-compose.yml up -d`.
 
-Node server will be hosted at localhost:8080 (if you didn't change `.env`).
+Node server will be hosted at localhost:8080 (if you didn't change `/env/dev.env`).
 
-To inspect docker container startup use `sudo docker-compose up` instead of `make up`.
+To inspect docker container startup use `make up-debug` (or `sudo docker-compose --env-file ./env/dev.env -f docker-compose.yml up`).
 
 ## Deploy to prod
 
@@ -41,8 +41,8 @@ Change the values inside `.env` to suit your needs. Never use the default values
 
 ## ToDos
 
-- Create .vscode/launch.json that can be attached to docker node
-- Make prod build work
+- [] Create .vscode/launch.json that can be attached to docker node
+- [x] Make prod build work
 
 ## Credits
 
